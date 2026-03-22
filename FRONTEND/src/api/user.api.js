@@ -24,3 +24,8 @@ export const getAllUserUrls = async () =>{
     const {data} = await axiosInstance.post("/api/user/urls")
     return data
 }
+
+export const deleteUserUrl = async (urlId) =>{
+    const {data} = await axiosInstance.delete(`/api/user/url/${urlId}`)
+    return data
+}

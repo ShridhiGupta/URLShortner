@@ -4,21 +4,23 @@ import { useSelector } from 'react-redux'
 import { QueryClient } from '@tanstack/react-query'
 import { queryClient } from '../main'
 
-const UrlForm = () => {
+const UrlForm = ({ onUrlCreated }) => {
   
   const [url, setUrl] = useState("https://www.google.com")
   const [shortUrl, setShortUrl] = useState()
   const [copied, setCopied] = useState(false)
   const [error, setError] = useState(null)
-  const [customSlug, setCustomSlug] = useState("")
   const {isAuthenticated} = useSelector((state) => state.auth)
 
   const handleSubmit = async () => {
     try{
-      const shortUrl = await createShortUrl(url,customSlug)
+      const shortUrl = await createShortUrl(url)
       setShortUrl(shortUrl)
       queryClient.invalidateQueries({queryKey: ['userUrls']})
       setError(null)
+      if (onUrlCreated) {
+        onUrlCreated(); // Notify parent component
+      }
     }catch(err){
       setError(err.message)
     }
@@ -59,21 +61,6 @@ const UrlForm = () => {
          {error && (
           <div className="mt-4 p-3 bg-red-100 text-red-700 rounded-md">
             {error}
-          </div>
-        )}
-        {isAuthenticated && (
-          <div className="mt-4">
-            <label htmlFor="customSlug" className="block text-sm font-medium text-gray-700 mb-1">
-              Custom URL (optional)
-            </label>
-            <input
-              type="text"
-              id="customSlug"
-              value={customSlug}
-              onChange={(event) => setCustomSlug(event.target.value)}
-              placeholder="Enter custom slug"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
           </div>
         )}
         {shortUrl && (

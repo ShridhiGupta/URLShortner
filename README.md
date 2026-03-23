@@ -60,8 +60,8 @@ URLShortner/
 │   │   │   └── user.routes.js       # User management routes
 │   │   ├── middleware/    # Express middleware
 │   │   │   ├── auth.middleware.js   # JWT verification
-│   │   │   └── attachUser.js        # Optional user attachment
 │   │   ├── utils/         # Utility functions
+│   │   |___|__ attachUser.js          # Attach user to request
 │   │   │   ├── errorHandler.js      # Error handling
 │   │   │   ├── helper.js            # JWT, nanoid helpers
 │   │   │   └── tryCatchWrapper.js   # Async error wrapper

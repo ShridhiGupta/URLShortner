@@ -93,7 +93,7 @@ const Dashboard = () => {
                           {url.full_url}
                         </p>
                         <p className="text-sm text-blue-600 hover:text-blue-800">
-                          {window.location.origin}/{url.short_url}
+                          {url.backend_url || `${import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000'}/${url.short_url}`}
                         </p>
                         <p className="text-xs text-gray-500 mt-1">
                           Clicks: {url.clicks || 0}
@@ -101,7 +101,7 @@ const Dashboard = () => {
                       </div>
                       <div className="ml-4 flex-shrink-0 flex space-x-2">
                         <button
-                          onClick={() => navigator.clipboard.writeText(`${window.location.origin}/${url.short_url}`)}
+                          onClick={() => navigator.clipboard.writeText(url.backend_url || `${import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000'}/${url.short_url}`)}
                           className="text-blue-600 hover:text-blue-800 text-sm"
                         >
                           Copy

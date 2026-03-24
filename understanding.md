@@ -113,7 +113,7 @@ Frontend (React) ↔ Backend (Express API) ↔ Database (MongoDB)
 #### Utils (`src/utils/`)
 - **errorHandler.js**: Centralized error handling, custom error classes
 - **helper.js**: JWT token operations, nanoid generation
-- **tryCatchWrapper.js`: Async error handling wrapper
+- **tryCatchWrapper.js**: Async error handling wrapper
 
 #### Config (`src/config/`)
 - **mongo.config.js`: Database connection setup, configuration
@@ -121,8 +121,8 @@ Frontend (React) ↔ Backend (Express API) ↔ Database (MongoDB)
 
 #### Routes (`src/routes/`)
 - **auth.routes.js**: Authentication endpoint routing
-- **short_url.route.js`: URL creation endpoint routing
-- **user.routes.js`: User management endpoint routing
+- **short_url.route.js**: URL creation endpoint routing
+- **user.routes.js**: User management endpoint routing
 
 ## 3. Frontend Architecture
 

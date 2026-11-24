@@ -158,7 +158,7 @@ URLShortner/
 
 4. **Open your browser** and navigate to `http://localhost:5173`
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Authentication
 - `POST /api/auth/register` - Create new user
@@ -174,7 +174,7 @@ URLShortner/
 ### Redirection
 - `GET /:id` - Redirect to original URL
 
-## 🎯 Features in Detail
+## Features in Detail
 
 ### **Anonymous Users**
 - Create short URLs without registration
@@ -194,7 +194,7 @@ URLShortner/
 - **Dashboard**: Personal URL management center
 - **Navigation**: Context-aware navbar with auth state
 
-## 🔐 Authentication
+## Authentication
 
 The application uses JWT tokens stored in HTTP-only cookies for secure authentication:
 

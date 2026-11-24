@@ -2,7 +2,7 @@
 
 A modern URL shortening application with user authentication, analytics, and a clean interface.
 
-## 🚀 Features
+## Features
 
 - **URL Shortening**: Convert long URLs into short, shareable links
 - **User Authentication**: Register, login, and manage your URLs
@@ -13,7 +13,7 @@ A modern URL shortening application with user authentication, analytics, and a c
 - **Secure**: JWT authentication with HTTP-only cookies
 - **Real-time Updates**: Automatic refresh after URL creation/deletion
 
-## 🏗️ Architecture
+## Architecture
 
 ### Frontend (React)
 - **React 19** with modern hooks
@@ -35,7 +35,7 @@ A modern URL shortening application with user authentication, analytics, and a c
 - **User and URL collections**
 - **Indexed for fast lookups**
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 URLShortner/
@@ -102,7 +102,7 @@ URLShortner/
 └── package.json
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js (v18 or higher)

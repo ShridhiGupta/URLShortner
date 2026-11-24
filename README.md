@@ -204,7 +204,7 @@ The application uses JWT tokens stored in HTTP-only cookies for secure authentic
 4. **Session Management**: Tokens expire after 1 hour
 5. **Security**: HTTP-only cookies prevent XSS attacks
 
-## 🛠️ Development
+## Development
 
 ### Backend Development
 ```bash
@@ -224,7 +224,7 @@ npm run build  # Build for production
 - Prettier for consistent formatting
 - Follows clean architecture principles
 
-## 🚀 Deployment
+## Deployment
 
 ### Option 1: Single Service Deployment
 Deploy both frontend and backend as a single service:
